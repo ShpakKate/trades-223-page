@@ -1,0 +1,15 @@
+button {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.has-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.icon {
+  vertical-align: middle;
+}

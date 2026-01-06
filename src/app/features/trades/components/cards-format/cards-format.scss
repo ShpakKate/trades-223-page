@@ -1,0 +1,25 @@
+@import "mixins";
+
+.section {
+  gap: 44px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include ony-one;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  padding-bottom: 10px;
+}
+
+.text {
+  padding-top: 4px;
+  color: var(--color-gray);
+  max-width: 405px;
+}

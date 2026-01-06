@@ -1,0 +1,89 @@
+<section class="table-container">
+  <table class="stages-table">
+    <thead>
+    <tr>
+      <th class="col-stage">Этап</th>
+      <th class="col-organ">Отдел</th>
+      <th class="col-timelines">
+        <div class="title-wrapper">
+          Сроки
+          <app-icon [path]="'assets/icons/info.svg'"></app-icon>
+        </div>
+      </th>
+      <th class="col-cost">
+        <div class="title-wrapper">
+          Стоимость
+          <app-icon [path]="'assets/icons/info.svg'"></app-icon>
+        </div>
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <ng-container *ngIf="data$ | async as data">
+      <tr *ngFor="let stage of data.stages" class="stage-row">
+        <td>
+          <div class="stage-cell">
+            <span class="stage-name">{{ stage.name }}</span>
+            <app-icon [path]="'assets/icons/arrow.svg'" class="icon-arrow"></app-icon>
+          </div>
+        </td>
+        <td>
+          <span>{{ stage.organ }}</span>
+        </td>
+        <td>
+          <div class="timelines">
+            <div *ngFor="let timeline of stage.timelines" class="timeline">
+              <span>{{ timeline.value}} {{ timeline.type }}</span>
+            </div>
+          </div>
+        </td>
+        <td class="cost-cell">
+          <span>{{ stage.cost }}</span>
+        </td>
+      </tr>
+
+      <tr *ngIf="data.total as total" class="total-row" >
+        <td>
+          <strong>{{ total.name }}</strong>
+        </td>
+        <td></td>
+        <td>
+          <div class="timelines">
+            <div *ngFor="let timeline of total.timelines" class="timeline">
+              <span>{{ timeline.value}} {{ timeline.type }}</span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="col-cost">
+            <h4 class="total-cost">{{ total.cost }}</h4>
+            <div class="total-cost-text">Расчет стоимости</div>
+          </div>
+          <div class="col-cost total-timelines">
+            <div class="total-timelines-text start">
+              <div>Когда начинаем</div>
+              <div class="date-scheme">{{ 'дд.мм.гггг' | uppercase }}</div>
+            </div>
+            <div class="timelines-icon">~</div>
+            <div class="total-timelines-text end">
+              <div>Когда закончим</div>
+              <div class="date-symbols">********</div>
+            </div>
+          </div>
+          <div class="details-wrapper">
+            <div class="total-details">
+              <div class="">Детализация работ</div>
+              <app-icon [path]="'assets/icons/arrow.svg'"></app-icon>
+            </div>
+            <div class="total-details">
+              <div class="">Скачать КП</div>
+              <app-icon class="total-details-icon" [path]="'assets/icons/download.svg'"></app-icon>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</section>

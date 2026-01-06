@@ -1,0 +1,36 @@
+<section class="info">
+  <div class="info-wrapper">
+    <div class="subscription-wrapper">
+      <div>Полезная рассылка о бренд-стратегии, дизайне и разработке</div>
+      <div class="email-wrapper">
+        <div>E-mail</div>
+        <div class="dash"></div>
+        <div class="email-text">Нажимая кнопку «подписаться», вы соглашаетесь <br> с правилами обработки персональных данных</div>
+      </div>
+      <div>
+        <a>Подписаться</a>
+      </div>
+    </div>
+    <div class="cards-wrapper">
+      <div *ngFor="let card of socialData">
+        <div class="title">
+          {{ card.title }}
+          <app-icon *ngIf="card.icon" [path]="'assets/icons/download.svg'"></app-icon>
+        </div>
+        <ul>
+          <li *ngFor="let item of card.list">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="text">©Ony Agency Interntational. All rights reserved.</div>
+    <div class="buttons-wrapper">
+      <app-icon [path]="'assets/icons/menu.svg'"></app-icon>
+      <app-button class="btn" [isIcon]="false" [width]="126" [height]="38"></app-button>
+      <app-icon [path]="'assets/icons/file-load.svg'"></app-icon>
+    </div>
+    <div class="text">Москва, Берсеневская набережная, 6с3</div>
+  </div>
+</section>

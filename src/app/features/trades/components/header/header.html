@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo-wrapper">
+      <span class="logo">{{ logo | uppercase }}</span>
+      <span class="link-text">{{ linkText }}</span>
+    </div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <div *ngIf="commercialOffer$ | async as offer" class="header-body">
+    <h1 class="title">{{ offer.title }}</h1>
+    <div class="date">
+      От {{ offer.date }}. Действует до {{ offer.validUntil }}.
+    </div>
+  </div>
+</header>

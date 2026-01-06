@@ -1,0 +1,40 @@
+@import "mixins";
+
+.section-title {
+  padding-bottom: 100px;
+  display: flex;
+  margin: 0;
+
+  .intro-header {
+    padding-right: 10px;
+    @include ony-one;
+    width: 30%;
+  }
+
+  .intro {
+    padding: 0 70px 0 36px;
+    @include ony-one(35px, 40px);
+    width: 70%;
+  }
+
+  .table {
+    @include ony-one(35px, 40px);
+    width: 70%;
+
+    .intro-wrapper {
+      display: flex;
+      border-top: 1px dashed var(--color-gray);
+      padding: 24px 0;
+    }
+
+    &-title {
+      width: 56%;
+    }
+
+    &-value {
+      width: 44%;
+      color: var(--color-gray);
+      @include ony-one;
+    }
+  }
+}

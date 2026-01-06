@@ -1,0 +1,163 @@
+@import "mixins";
+
+@mixin col {
+  width: 460px;
+}
+
+.table-container {
+  padding-bottom: 100px;
+}
+
+.stages-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead {
+    height: 30px;
+  }
+
+  tr {
+    border-top: 1px dashed var(--color-gray);
+  }
+
+  th {
+    text-align: left;
+    @include ony-one(14px, 18px, -2%);
+    color: var(--color-gray);
+    padding-left: 12px;
+
+    &.col-stage { width: 30%; }
+    &.col-organ { width: 19%; }
+    &.col-timelines { width: 19%; }
+    &.col-cost { width: 32%; }
+  }
+
+  td {
+    padding: 8px 12px 40px 12px;
+    @include ony-one;
+    color: var(--color-white);
+    margin: 0;
+  }
+
+  .title-wrapper {
+    display: flex;
+    column-gap: 4px;
+  }
+
+  .stage-row {
+    @include ony-one;
+    padding: 8px 0 40px 0;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--color-dark-gray);
+
+      ::ng-deep .icon-arrow path {
+        stroke: var(--color-white);
+      }
+    }
+
+    .cost-cell {
+      vertical-align: baseline;
+    }
+  }
+
+  .stage-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .stage-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .stage-arrow {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .timelines {
+    div {
+      padding-bottom: 4px;
+    }
+  }
+
+  .total-row {
+    .col-cost {
+      padding-bottom: 32px;
+    }
+
+    .total-cost-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .total-cost {
+      @include ony-one(55px, 65px, -2%);
+      margin: 0;
+    }
+
+    .total-cost-text {
+      display: inline-block;
+      @include ony-one(14px, 18px);
+      color: var(--color-gray);
+      border-bottom: 1px dashed var(--color-gray);
+    }
+
+    .total-timelines {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 24px;
+      padding: 16px 24px 16px 16px;
+      color: var(--color-gray);
+      background: var(--color-black-light);
+
+      .start {
+        column-gap: 8px;
+      }
+
+      .end {
+        padding-bottom: 8px;
+      }
+    }
+
+    .total-timelines-text {
+      @include ony-one(14px, 18px);
+    }
+
+    .date-scheme {
+      padding: 8px 0;
+      @include ony-one(19px, 22px);
+      border-bottom: 1px dashed var(--color-gray);
+    }
+
+    .date-symbols {
+      padding: 8px 0;
+      @include ony-one(19px, 22px);
+      color: var(--color-white);
+    }
+
+    .timelines-icon {
+      @include ony-one(35px, 40px);
+      color: var(--color-gray);
+    }
+
+    .details-wrapper {
+      padding-top: 32px;
+    }
+
+    .total-details {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 12px 12px 0;
+      border-bottom: 1px dashed var(--color-gray);
+
+      &-icon {
+        color: var(--color-gray);
+      }
+    }
+  }
+}

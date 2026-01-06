@@ -1,0 +1,30 @@
+@import "mixins";
+
+.section {
+  gap: 44px;
+  padding-bottom: 84px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include ony-one;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  column-gap: 12px;
+  width: 100%;
+
+  .img {
+    padding-bottom: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .title {
+    display: flex;
+    column-gap: 4px;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="commercial-offer-page">
+  <app-header></app-header>
+  <main>
+    <app-base-format
+      [introHeader]="'Этапы и цены'"
+      [intro]="'Короткое вводное слово о том как мы хотим решить задачу, с помощью чего и всякое такое'"
+    ></app-base-format>
+    <app-stages-table></app-stages-table>
+    <app-base-format [introData]="introData"></app-base-format>
+    <app-base-format
+      [introHeader]="'Экспертиза'"
+      [intro]="'Мы решаем сложные задачи — делимся нашими кейсами как примерами подхода и результата'"
+    ></app-base-format>
+    <app-cards-format
+      [mtsImg]="'/assets/img/mts.png'"
+      [kasperskyImg]="'/assets/img/kaspersky.png'"
+      [kasperskyText]="'Рестайлинг айдентики лидера в сфере кибербезопасности'"
+    ></app-cards-format>
+    <app-cards-format
+      [mtsImg]="'/assets/img/mts-2.png'"
+      [mtsPadding]="150"
+      [kasperskyImg]="'/assets/img/kaspersky-2.png'"
+    ></app-cards-format>
+    <app-base-format
+      [intro]="'Мы соединяем стратегию, дизайн и технологии, чтобы делать бренды сильнее и заметнее'"
+    ></app-base-format>
+    <app-cards-full [img]="'/assets/img/doll.png'"></app-cards-full>
+    <app-questions-format></app-questions-format>
+    <app-info-format></app-info-format>
+  </main>
+</div>

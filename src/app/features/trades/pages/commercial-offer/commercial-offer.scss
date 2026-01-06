@@ -1,0 +1,12 @@
+.commercial-offer-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 0 44px;
+
+  main {
+    flex: 1;
+  }
+}

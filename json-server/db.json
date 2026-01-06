@@ -1,0 +1,116 @@
+{
+  "commercialOffer": {
+    "id": 1,
+    "title": "Коммерческое предложение для ЭТП «Торги 223»",
+    "date": "10.06.2026",
+    "validUntil": "10:09:02",
+    "intro": "Короткое вводное слово о том как мы хотим решить задачу, с помощью чего и всякое такое"
+  },
+  "data": {
+    "stages": [
+      {
+        "id": 1,
+        "name": "Research",
+        "organ": "Signal",
+        "timelines": [
+          {
+            "type": "раб.дн",
+            "value": "123",
+            "display": "123 раб.дн"
+          },
+          {
+            "type": "paб.нед",
+            "value": "456",
+            "display": "456 раб.нед"
+          },
+          {
+            "type": "этапов",
+            "value": "789",
+            "display": "789 этапов"
+          }
+        ],
+        "cost": "150 000 000 ₽",
+        "costNumeric": 150000000,
+        "currency": "₽",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "name": "Design",
+        "organ": "Branding",
+        "timelines": [
+          {
+            "type": "раб.дн",
+            "value": "123",
+            "display": "123 раб.дн"
+          },
+          {
+            "type": "раб.нед",
+            "value": "456",
+            "display": "456 раб.нед"
+          },
+          {
+            "type": "этапов",
+            "value": "789",
+            "display": "789 этапов"
+          }
+        ],
+        "cost": "150 000 000 ₽",
+        "costNumeric": 150000000,
+        "currency": "₽",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "name": "Digital",
+        "organ": "Digital",
+        "timelines": [
+          {
+            "type": "раб.дн",
+            "value": "123",
+            "display": "123 раб.дн"
+          },
+          {
+            "type": "раб.нед",
+            "value": "456",
+            "display": "456 раб.нед"
+          },
+          {
+            "type": "этапов",
+            "value": "789",
+            "display": "789 этапов"
+          }
+        ],
+        "cost": "150 000 000 ₽",
+        "costNumeric": 150000000,
+        "currency": "₽",
+        "order": 3
+      }
+    ],
+    "total": {
+      "id": 1,
+      "name": "Итого",
+      "organ": "",
+      "timelines": [
+        {
+          "type": "раб.дн",
+          "value": "135",
+          "display": "135 раб.дн"
+        },
+        {
+          "type": "раб. нед",
+          "value": "246",
+          "display": "246 раб. нед"
+        },
+        {
+          "type": "этапов",
+          "value": "357",
+          "display": "357 этапов"
+        }
+      ],
+      "cost": "29 820 819 ₽",
+      "costNumeric": 29820819,
+      "currency": "₽"
+    }
+  }
+}

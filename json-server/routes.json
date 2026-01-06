@@ -1,0 +1,6 @@
+{
+  "/api/departments": "/departments",
+  "/api/totals": "/totals",
+  "/api/offer": "/commercialOffer",
+  "/api/departments/:id": "/departments/:id"
+}

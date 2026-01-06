@@ -1,0 +1,81 @@
+@import "mixins";
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+  padding: 64px 0 72px 0;
+  border-top: 1px dashed var(--color-gray);
+}
+
+.info-wrapper {
+  display: flex;
+  column-gap: 200px;
+}
+
+.subscription-wrapper {
+  min-width: 400px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 20px;
+  @include ony-one;
+  background: var(--color-black-light);
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  color: var(--color-gray);
+
+  .dash {
+    border-top: 1px dashed var(--color-gray);
+  }
+
+  .email-text {
+    @include ony-one(14px, 18px);
+  }
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: 230px repeat(2, 180px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 44px;
+  grid-row-gap: 120px;
+  @include ony-one;
+}
+
+.title {
+  width: max-content;
+  display: flex;
+  column-gap: 12px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  .text {
+    color: var(--color-gray);
+  }
+
+  .buttons-wrapper {
+    background: var(--color-black-light);
+    border-radius: 4px;
+    padding: 8px 18px;
+    display: flex;
+
+    .btn {
+      padding: 0 38px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<h2 *ngIf="!introData" class="section-title">
+  <div class="intro-header">{{ introHeader }}</div>
+  <div class="intro">{{ intro }}</div>
+</h2>
+
+<ng-container *ngIf="introData">
+  <h2 class="section-title">
+    <div class="intro-header">{{ introData.introHeader }}</div>
+    <div class="table">
+      <div *ngFor="let intro of introData.intro" class="intro-wrapper">
+        <div class="table-title">{{ intro.title }}</div>
+        <div class="table-value">{{ intro.value }}</div>
+      </div>
+    </div>
+  </h2>
+</ng-container>

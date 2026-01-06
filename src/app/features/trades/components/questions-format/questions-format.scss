@@ -1,0 +1,47 @@
+@import "mixins";
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+  padding: 120px 0 200px 0;
+}
+
+.title {
+  @include ony-one(75px, 90px, -2%);
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 24px 0;
+  border-top: 1px dashed var(--color-gray);
+}
+
+.theme {
+  flex: 6;
+}
+
+.user-wrapper {
+  flex: 6;
+  display: flex;
+  column-gap: 12px;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  @include ony-one;
+
+  .role {
+    color: var(--color-gray);
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
